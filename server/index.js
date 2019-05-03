@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/values/all', async (req, res) => {
-  console.log('Received get request for all values.')
+  console.log('Received get request for all values.');
   const values = await pgClient.query('SELECT * from values');
 
   res.send(values.rows);
